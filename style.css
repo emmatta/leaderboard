@@ -60,6 +60,16 @@ hr {
     width: 80%;
     margin: 0 auto;
 }
+.player-name span {
+    color: #999;
+    font-style: italic;
+}
+.player-name span:before {
+    content: "“";
+}
+.player-name span:after {
+    content: "”";
+}
 img {
     border-radius: 100%;
     width: 75px;
@@ -79,7 +89,7 @@ img {
 .downward {
     color: #E95F5C;
 }
-span {
+.rank-change span {
     float: left;
     margin: 8px 15px 0 0;
     opacity: 0.65;
