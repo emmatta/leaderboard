@@ -60,15 +60,19 @@ hr {
     width: 80%;
     margin: 0 auto;
 }
-.player-name span {
+.player-name .nickname {
     color: #999;
     font-style: italic;
 }
-.player-name span:before {
+.player-name .nickname:before {
     content: "“";
 }
-.player-name span:after {
+.player-name .nickname:after {
     content: "”";
+}
+.player-name .rank-number {
+    color: #999;
+    font-size: .7em;
 }
 img {
     border-radius: 100%;

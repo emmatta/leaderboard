@@ -28,12 +28,12 @@
                 var list = $('ol');
                 $.each(results.leaderboard.slice(0, 10), function(index, item){
                     var photo_url = item.player.photo_url;
-                    var player_name = item.player.name.replace(/"([^"]+)"/g, '<span>$1</span>');
+                    var player_name = item.player.name.replace(/"([^"]+)"/g, '<span class="nickname">$1</span>');
                     var li = $('<li>');
                     if(photo_url.indexOf('media') >= 0){
                         photo_url = 'http://athletable.com' + photo_url;
                     }
-                    li.append('<div class="player-name"><img src="' + photo_url + '" />' + player_name + '</div>');
+                    li.append('<div class="player-name"><img src="' + photo_url + '" /><span class="rank-number">' + item.rank + '.</span> ' + player_name + '</div>');
                     if(item.rank_changed_at === item.updated_at){
                         var rank_change = Math.abs(item.rank - item.rank_before);
                         if(item.rank < item.rank_before){
