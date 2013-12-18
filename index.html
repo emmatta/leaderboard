@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Leaderboard :: Emma Table Tennis Association</title>
+    </head>
+    <body>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script>
+        $.ajax({
+            url: 'https://athletable.com/sports/9859cd755e.json?api_key=5e20ddf7a96bea6a4d92d23487e6fc5412e9d414',
+            dataType: 'json',
+            success: function(results){
+                console.log(results);
+            }
+        });
+        </script>
+    </body>
+</html>
