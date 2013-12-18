@@ -4,7 +4,6 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Leaderboard :: Emma Table Tennis Association</title>
-        <!--<script src="//use.typekit.net/omi8fia.js"></script>-->
         <script src="//use.typekit.net/hyy2hjn.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
         <link rel="stylesheet" href="style.css" />
@@ -35,7 +34,7 @@
                         photo_url = 'http://athletable.com' + photo_url;
                     }
                     li.append('<div class="player-name"><img src="' + photo_url + '" />' + player_name + '</div>');
-                    if(item.rank_changed_at !== item.updated_at){
+                    if(item.rank_changed_at === item.updated_at){
                         var rank_change = Math.abs(item.rank - item.rank_before);
                         if(item.rank < item.rank_before){
                             li.append('<div class="upward rank-change"><span>&uarr;</span>' + rank_change +'</div>');
