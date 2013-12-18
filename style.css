@@ -1,0 +1,97 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ol, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+body {
+    line-height: 1;
+    font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+    background: #FFF;
+    color: #000;
+}
+a:link, a:visited, a:active {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+}
+a:hover, a:focus {
+    border-bottom: 0;
+}
+h1 {
+    font-size: 1.75em;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 5px;
+}
+h2 {
+    color: #999;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 100px;
+}
+p {
+    clear: both;
+    padding: 50px 0;
+    text-align: center;
+    font-size: 1em;
+    color: #666;
+}
+ol {
+    list-style: none;
+}
+li {
+    background: #FFF;
+    display: block;
+    clear: both;
+    font-size: 2em;
+    padding: 30px 10%;
+}
+li:nth-child(odd) {
+    background: #F2F2F2;
+}
+hr {
+    height: 2px;
+    border: 0;
+    background: #F2F2F2;
+    width: 80%;
+    margin: 0 auto;
+}
+img {
+    border-radius: 100%;
+    width: 75px;
+    vertical-align: middle;
+    margin-right: 30px;
+}
+.rank-change {
+    margin-top: -50px;
+    width: 50px;
+    float: right;
+    font-size: .8em;
+    color: #8F8F8F;
+}
+.upward {
+    color: #ACC924;
+}
+.downward {
+    color: #E95F5C;
+}
+span {
+    float: left;
+    margin: 8px 15px 0 0;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    width: 20px;
+    height: 11px;
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none;
+    display: block;
+    background: transparent url(rank-arrows.png);
+}
+.downward span {
+    background-position: 0 -11px;
+}
