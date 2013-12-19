@@ -19,6 +19,7 @@
     <body>
         <h1>Emma Table Tennis Association</h1>
         <h2>The Leaderboard</h2>
+        <div class="loading"></div>
         <ol></ol>
         <hr />
         <p>Data provided by <a href="https://athletable.com/sports/9859cd755e" target="_blank">Athletable</a></p>
@@ -45,7 +46,7 @@
                     list.append(li);
                 });
                 $('li').each(function(item){ $(this).delay((item + 1) * 250).fadeIn(); });
-                setTimeout(function(){ $('p').fadeIn(); }, 3000);
+                setTimeout(function(){ $('hr, p').fadeIn(); }, 3000);
             }
             var leaderboard_updated = localStorage.getItem('leaderboard_updated');
             var current_time        = new Date().getTime();
@@ -63,6 +64,7 @@
                 var leaderboard = localStorage.getItem('leaderboard');
                 build_leaderboard(JSON.parse(leaderboard));
             }
+            setTimeout(function(){ $('.loading').remove(); }, 3000);
         </script>
     </body>
 </html>

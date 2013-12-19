@@ -11,7 +11,6 @@ body {
     font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #444;
     background: #FFF;
-    color: #000;
 }
 a:link, a:visited, a:active {
     color: #000;
@@ -43,6 +42,8 @@ p {
 }
 ol {
     list-style: none;
+    position: relative;
+    z-index: 1;
 }
 li {
     background: #FFF;
@@ -55,6 +56,7 @@ li:nth-child(odd) {
     background: #F2F2F2;
 }
 hr {
+    display: none;
     height: 2px;
     border: 0;
     background: #F2F2F2;
@@ -109,4 +111,42 @@ img {
 }
 .downward span {
     background-position: 0 -11px;
+}
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    height: 50px;
+    width: 50px;
+    margin: -25px 0 0 -25px;
+    border-bottom: 6px solid #EEE;
+    border-left: 6px solid #EEE;
+    border-right: 6px solid #999;
+    border-top: 6px solid #999;
+    border-radius: 100%;
+    -webkit-animation: spin .6s infinite linear;
+    animation: spin .6s infinite linear;
+}
+
+@keyframes "spin" {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }   
+    to {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@-webkit-keyframes "spin" {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
 }
