@@ -47,11 +47,9 @@
                 $('li').each(function(item){ $(this).delay((item + 1) * 250).fadeIn(); });
                 setTimeout(function(){ $('p').fadeIn(); }, 3000);
             }
-
             var leaderboard_updated = localStorage.getItem('leaderboard_updated');
             var current_time        = new Date().getTime();
-
-            if(leaderboard_updated === null || leaderboard_updated > (current_time + 3600)){
+            if(leaderboard_updated === null || leaderboard_updated < (current_time + 3600)){
                 $.ajax({
                     url: 'https://athletable.com/sports/9859cd755e.json?api_key=5e20ddf7a96bea6a4d92d23487e6fc5412e9d414',
                     dataType: 'json',
