@@ -37,6 +37,7 @@
                     }
                     list.append(li);
                 });
+                console.log(results);
                 $('li').each(function(item){ $(this).delay((item + 1) * 250).fadeIn(); });
                 setTimeout(function(){ $('hr, p').fadeIn(); }, 3000);
             }
