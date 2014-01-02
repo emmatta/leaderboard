@@ -7,6 +7,14 @@
         <script src="//use.typekit.net/hyy2hjn.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
         <link rel="stylesheet" href="style.css" />
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-20333926-9', 'emmatta.github.io');
+            ga('send', 'pageview');
+        </script>
     </head>
     <body>
         <h1>Emma Table Tennis Association</h1>
@@ -20,22 +28,24 @@
             function build_leaderboard(results){
                 var list = $('ol');
                 $.each(results.leaderboard.slice(0, 10), function(index, item){
-                    var photo_url = item.player.photo_url;
-                    var player_name = item.player.name.replace(/"([^"]+)"/g, '<span class="nickname">$1</span>');
-                    var li = $('<li>');
-                    if(photo_url.indexOf('media') >= 0){
-                        photo_url = 'http://athletable.com' + photo_url;
-                    }
-                    li.append('<div class="player-name"><img src="' + photo_url + '" /><span class="rank-number">' + item.rank + '.</span> ' + player_name + '</div>');
-                    if(item.rank_changed_at === item.updated_at){
-                        var rank_change = Math.abs(item.rank - item.rank_before);
-                        if(item.rank < item.rank_before){
-                            li.append('<div class="upward rank-change"><span>&uarr;</span>' + rank_change +'</div>');
-                        } else {
-                            li.append('<div class="downward rank-change"><span>&darr;</span> ' + rank_change +'</div>');
+                    if(item.player.player_name !== 'Admin'){
+                        var photo_url = item.player.photo_url;
+                        var player_name = item.player.name.replace(/"([^"]+)"/g, '<span class="nickname">$1</span>');
+                        var li = $('<li>');
+                        if(photo_url.indexOf('media') >= 0){
+                            photo_url = 'http://athletable.com' + photo_url;
                         }
+                        li.append('<div class="player-name"><img src="' + photo_url + '" /><span class="rank-number">' + item.rank + '.</span> ' + player_name + '</div>');
+                        if(item.rank_changed_at === item.updated_at){
+                            var rank_change = Math.abs(item.rank - item.rank_before);
+                            if(item.rank < item.rank_before){
+                                li.append('<div class="upward rank-change"><span>&uarr;</span>' + rank_change +'</div>');
+                            } else {
+                                li.append('<div class="downward rank-change"><span>&darr;</span> ' + rank_change +'</div>');
+                            }
+                        }
+                        list.append(li);
                     }
-                    list.append(li);
                 });
                 console.log(results);
                 $('li').each(function(item){ $(this).delay((item + 1) * 250).fadeIn(); });
@@ -45,7 +55,7 @@
             var current_time        = new Date().getTime();
             if(leaderboard_updated === null || leaderboard_updated < (current_time + 3600)){
                 $.ajax({
-                    url: 'https://athletable.com/sports/9859cd755e.json?api_key=5e20ddf7a96bea6a4d92d23487e6fc5412e9d414',
+                    url: 'https://athletable.com/sports/26db38d401.json?api_key=5e20ddf7a96bea6a4d92d23487e6fc5412e9d414',
                     dataType: 'json',
                     success: function(results){
                         localStorage.setItem('leaderboard_updated', current_time);
@@ -58,19 +68,6 @@
                 build_leaderboard(JSON.parse(leaderboard));
             }
             setTimeout(function(){ $('.loading').remove(); }, 3000);
-        </script>
-        <script>
-            var _gauges = _gauges || [];
-            (function(){
-                var t   = document.createElement('script');
-                t.type  = 'text/javascript';
-                t.async = true;
-                t.id    = 'gauges-tracker';
-                t.setAttribute('data-site-id', '52b2710b8bfdf76f4a001e87');
-                t.src = '//secure.gaug.es/track.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(t, s);
-            })();
         </script>
     </body>
 </html>
