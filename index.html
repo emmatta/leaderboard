@@ -55,7 +55,7 @@
             var current_time        = new Date().getTime();
             if(leaderboard_updated === null || leaderboard_updated < (current_time + 3600)){
                 $.ajax({
-                    url: 'https://athletable.com/sports/26db38d401.json?api_key=5e20ddf7a96bea6a4d92d23487e6fc5412e9d414',
+                    url: 'https://athletable.com/sports/9859cd755e.json?api_key=5e20ddf7a96bea6a4d92d23487e6fc5412e9d414',
                     dataType: 'json',
                     success: function(results){
                         localStorage.setItem('leaderboard_updated', current_time);
