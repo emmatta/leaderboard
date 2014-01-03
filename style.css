@@ -20,18 +20,10 @@ a:link, a:visited, a:active {
 a:hover, a:focus {
     border-bottom: 0;
 }
-h1 {
-    overflow: hidden;
-    width: 450px;
-    height: 227px;
-    margin: 50px auto;
-    background: #FFF url(http://emmatta.github.io/etta.png);
-}
-h1:before {
-    content: "";
+.logo {
+    max-width: 100%;
     display: block;
-    width: 0;
-    height: 100%;
+    margin: 50px auto;
 }
 p {
     clear: both;
@@ -78,7 +70,7 @@ hr {
     color: #999;
     font-size: .7em;
 }
-img {
+.player-name img {
     border-radius: 100%;
     width: 75px;
     vertical-align: middle;
@@ -133,6 +125,9 @@ img {
     .nickname, .rank-change {
         display: none;
     }
+    .logo {
+        max-width: 80%;
+    }
     h1 {
         font-size: 2em;
     }
@@ -142,7 +137,7 @@ img {
     li {
         font-size: 1.25em;
     }
-    img {
+    .player-name img {
         width: 50px;
         margin-right: 15px;
     }
