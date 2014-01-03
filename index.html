@@ -18,34 +18,31 @@
     </head>
     <body>
         <h1>Emma Table Tennis Association</h1>
-        <h2>The Leaderboard</h2>
         <div class="loading"></div>
         <ol></ol>
         <hr />
-        <p>Data provided by <a href="https://athletable.com/sports/9859cd755e" target="_blank">Athletable</a></p>
+        <p>Rankings provided by <a href="https://athletable.com/sports/26db38d401" target="_blank">Athletable</a></p>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script>
             function build_leaderboard(results){
                 var list = $('ol');
                 $.each(results.leaderboard.slice(0, 10), function(index, item){
-                    if(item.player.player_name !== 'Admin'){
-                        var photo_url = item.player.photo_url;
-                        var player_name = item.player.name.replace(/"([^"]+)"/g, '<span class="nickname">$1</span>');
-                        var li = $('<li>');
-                        if(photo_url.indexOf('media') >= 0){
-                            photo_url = 'http://athletable.com' + photo_url;
-                        }
-                        li.append('<div class="player-name"><img src="' + photo_url + '" /><span class="rank-number">' + item.rank + '.</span> ' + player_name + '</div>');
-                        if(item.rank_changed_at === item.updated_at){
-                            var rank_change = Math.abs(item.rank - item.rank_before);
-                            if(item.rank < item.rank_before){
-                                li.append('<div class="upward rank-change"><span>&uarr;</span>' + rank_change +'</div>');
-                            } else {
-                                li.append('<div class="downward rank-change"><span>&darr;</span> ' + rank_change +'</div>');
-                            }
-                        }
-                        list.append(li);
+                    var photo_url = item.player.photo_url;
+                    var player_name = item.player.name.replace(/"([^"]+)"/g, '<span class="nickname">$1</span>');
+                    var li = $('<li>');
+                    if(photo_url.indexOf('media') >= 0){
+                        photo_url = 'http://athletable.com' + photo_url;
                     }
+                    li.append('<div class="player-name"><img src="' + photo_url + '" /><span class="rank-number">' + item.rank + '.</span> ' + player_name + '</div>');
+                    if(item.rank_changed_at === item.updated_at){
+                        var rank_change = Math.abs(item.rank - item.rank_before);
+                        if(item.rank < item.rank_before){
+                            li.append('<div class="upward rank-change"><span>&uarr;</span>' + rank_change +'</div>');
+                        } else {
+                            li.append('<div class="downward rank-change"><span>&darr;</span> ' + rank_change +'</div>');
+                        }
+                    }
+                    list.append(li);
                 });
                 console.log(results);
                 $('li').each(function(item){ $(this).delay((item + 1) * 250).fadeIn(); });
