@@ -127,6 +127,7 @@ hr {
     }
     .logo {
         max-width: 80%;
+        margin: 15px auto;
     }
     h1 {
         font-size: 2em;
