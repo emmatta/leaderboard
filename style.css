@@ -1,174 +1,174 @@
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ol, li {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 body {
-    line-height: 1;
-    font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #444;
-    background: #FFF;
+  line-height: 1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: #444;
+  background: #FFF;
 }
 a:link, a:visited, a:active {
-    color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid #000;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
 }
 a:hover, a:focus {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 .logo {
-    max-width: 100%;
-    display: block;
-    margin: 100px auto;
+  max-width: 100%;
+  display: block;
+  margin: 100px auto;
 }
 p {
-    clear: both;
-    display: none;
-    margin: 50px 0;
-    text-align: center;
-    font-size: 1em;
-    color: #666;
+  clear: both;
+  display: none;
+  margin: 50px 0;
+  text-align: center;
+  font-size: 1em;
+  color: #666;
 }
 ol {
-    list-style: none;
-    position: relative;
-    z-index: 1;
+  list-style: none;
+  position: relative;
+  z-index: 1;
 }
 li {
-    background: #FFF;
-    display: none;
-    clear: both;
-    font-size: 2em;
-    padding: 30px 10%;
+  background: #FFF;
+  display: none;
+  clear: both;
+  font-size: 2em;
+  padding: 30px 10%;
 }
 li:nth-child(odd) {
-    background: #F2F2F2;
+  background: #F2F2F2;
 }
 hr {
-    display: none;
-    height: 2px;
-    border: 0;
-    background: #F2F2F2;
-    width: 80%;
-    margin: 0 auto;
+  display: none;
+  height: 2px;
+  border: 0;
+  background: #F2F2F2;
+  width: 80%;
+  margin: 0 auto;
 }
 .player-name .nickname {
-    color: #999;
-    font-style: italic;
+  color: #999;
+  font-style: italic;
 }
 .player-name .nickname:before {
-    content: "“";
+  content: "“";
 }
 .player-name .nickname:after {
-    content: "”";
+  content: "”";
 }
 .player-name .rank-number {
-    color: #999;
-    font-size: .7em;
+  color: #999;
+  font-size: .7em;
 }
 .player-name img {
-    border-radius: 100%;
-    width: 75px;
-    vertical-align: middle;
-    margin-right: 30px;
+  border-radius: 100%;
+  width: 75px;
+  vertical-align: middle;
+  margin-right: 30px;
 }
 .rank-change {
-    margin-top: -50px;
-    width: 70px;
-    float: right;
-    font-size: .8em;
-    color: #8F8F8F;
+  margin-top: -50px;
+  width: 70px;
+  float: right;
+  font-size: .8em;
+  color: #8F8F8F;
 }
 .upward {
-    color: #ACC924;
+  color: #ACC924;
 }
 .downward {
-    color: #E95F5C;
+  color: #E95F5C;
 }
 .rank-change span {
-    float: left;
-    margin: 8px 15px 0 0;
-    opacity: 0.65;
-    filter: alpha(opacity=65);
-    width: 20px;
-    height: 11px;
-    color: transparent;
-    font: 0/0 a;
-    text-shadow: none;
-    display: block;
-    background: transparent url(rank-arrows.png);
+  float: left;
+  margin: 8px 15px 0 0;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  width: 20px;
+  height: 11px;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+  display: block;
+  background: transparent url(rank-arrows.png);
 }
 .downward span {
-    background-position: 0 -11px;
+  background-position: 0 -11px;
 }
 .loading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -36px 0 0 -36px;
-    width: 72px;
-    height: 72px;
-    margin: 12px auto;
-    background: url(emma-loading.png);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  margin: 12px auto;
+  background: url(emma-loading.png);
 }
 .spinner {
-    width: 72px;
-    height: 72px;
-    position: relative;
-    border-left: 2px solid rgba(168, 178, 182, 0.25);
-    border-right: 2px solid rgba(168, 178, 182, 0.25);
-    border-bottom: 2px solid rgba(168, 178, 182, 0.25);
-    border-top: 2px solid #a8b2b6;
-    border-radius: 100%;
-    -webkit-animation: spin 0.6s infinite linear;
-    animation: spin 0.6s infinite linear;
+  width: 72px;
+  height: 72px;
+  position: relative;
+  border-left: 2px solid rgba(168, 178, 182, 0.25);
+  border-right: 2px solid rgba(168, 178, 182, 0.25);
+  border-bottom: 2px solid rgba(168, 178, 182, 0.25);
+  border-top: 2px solid #a8b2b6;
+  border-radius: 100%;
+  -webkit-animation: spin 0.6s infinite linear;
+  animation: spin 0.6s infinite linear;
 }
 
 @media (max-width: 480px) {
-    .nickname, .rank-change {
-        display: none;
-    }
-    .logo {
-        max-width: 80%;
-        margin: 15px auto;
-    }
-    h1 {
-        font-size: 2em;
-    }
-    h2 {
-        font-size: 1.5em;
-    }
-    li {
-        font-size: 1.25em;
-    }
-    .player-name img {
-        width: 50px;
-        margin-right: 15px;
-    }
+  .nickname, .rank-change {
+    display: none;
+  }
+  .logo {
+    max-width: 80%;
+    margin: 15px auto;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  li {
+    font-size: 1.25em;
+  }
+  .player-name img {
+    width: 50px;
+    margin-right: 15px;
+  }
 }
 
 @keyframes "spin" {
-    from {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }   
-    to {
-        -webkit-transform: rotate(359deg);
-        transform: rotate(359deg);
-    }
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }   
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
 }
 
 @-webkit-keyframes "spin" {
-    from {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(359deg);
-        transform: rotate(359deg);
-    }
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
 }
